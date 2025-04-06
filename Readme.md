@@ -1,9 +1,9 @@
 ## Step 1: 进行labelme标注
-将图片放入 ./dataset/images 下
-对应的图像分割标注文件放入 ./dataset/labelme_labels 下
+将图片放入 ./origin_dataset/images 下
+对应的图像分割标注文件放入 ./origin_dataset/labelme_labels 下
 
 ## Step 2: 转换为yolo标注格式
-用labelme2yolo.py将标注文件转为yolo格式，并放入 ./dataset/yolo_labels 下
+用labelme2yolo.py将标注文件转为yolo格式，并放入 ./origin_dataset/yolo_labels 下
 
 可以使用 visual_check_labels.py 脚本确认标注是正确的
 
@@ -35,7 +35,7 @@ yolo task=segment mode=train model=yolo12-seg.pt data=dataset.yaml epochs=100 im
 
 ### 使用模型结构从头训练
 ```bash
-yolo task=segment mode=train model=yolo12-seg.yaml data=dataset/dataset.yaml epochs=500 imgsz=1024 mosaic=1 name=my_yolo12_from_scratch
+yolo task=segment mode=train model=yolo12-seg.yaml data=dataset.yaml epochs=500 imgsz=1024 mosaic=1 name=my_yolo12_from_scratch
 ```
 - `model=yolo12-seg.yaml`：**指定模型结构文件**，不加载预训练权重。
 - `name=my_yolo12_from_scratch`：**指定输出模型的名字**，最终生成的 `.pt` 文件会保存在 `runs/segment/train_my_yolo12_from_scratch/weights/best.pt`。

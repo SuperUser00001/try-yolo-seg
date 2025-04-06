@@ -3,8 +3,8 @@ import json
 import glob
 
 # 配置路径
-labelme_dir = "./dataset/labelme_labels"  # LabelMe 标注的 JSON 文件目录
-output_dir = "./dataset/yolo_labels"  # YOLO 目标分割标签的保存目录
+labelme_dir = "./origin_dataset/labelme_labels"  # LabelMe 标注的 JSON 文件目录
+output_dir = "./origin_dataset/yolo_labels"  # YOLO 目标分割标签的保存目录
 class_mapping = {"orange": 0, "pear": 1}  # 类别映射
 
 # 确保输出目录存在
