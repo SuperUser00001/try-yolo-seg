@@ -3,3 +3,4 @@ runs/
 *.pt
 .idea/
 dataset/**/labels.cache
+sample_model/

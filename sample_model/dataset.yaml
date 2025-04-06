@@ -1,0 +1,8 @@
+path: E:\works\projects\yolo\dataset # 你的数据集主目录
+train: train/images  # 训练集列表
+val: valid/images  # 验证集列表
+test: test/images  # 测试集列表（可选）
+nc: 2  # 类别数量（橙子🍊和梨🍐）
+names:
+  0: orange
+  1: pear
