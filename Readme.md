@@ -1,3 +1,10 @@
+License
+-------
+
+This project is licensed under the AGPL-3.0 License, in compliance with the upstream Ultralytics project.
+
+![](./sample_model/val_batch0_labels.jpg)
+
 ## Step 1: 进行labelme标注
 将图片放入 ./origin_dataset/images 下
 对应的图像分割标注文件放入 ./origin_dataset/labelme_labels 下
